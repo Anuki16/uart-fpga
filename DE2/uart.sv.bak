@@ -1,0 +1,20 @@
+module uart #(
+	parameter CLOCKS_PER_PULSE = 16
+)
+(
+	input logic [7:0] data_in,
+	input logic data_en,
+	input logic clk,
+	input logic rstn,
+	output logic tx,
+	output logic tx_busy,
+	input logic ready_clr,
+	input logic rx,
+	output logic ready,
+	output logic [7:0] data_out
+);
+
+	transmitter #(.CLOCKS_PER_PULSE(CLOCKS_PER_PULSE)) uart_tx (.*);
+	receiver #(.CLOCKS_PER_PULSE(CLOCKS_PER_PULSE)) uart_rx (.*);
+	
+endmodule;

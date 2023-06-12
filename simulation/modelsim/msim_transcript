@@ -12,55 +12,66 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 4/EN2111\ Electronic\ Circuit\ Design/lab4 {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:56:45 on Jun 12,2023
+# Start time: 01:04:15 on Jun 13,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv 
 # -- Compiling module transmitter
 # 
 # Top level modules:
 # 	transmitter
-# End time: 23:56:45 on Jun 12,2023, Elapsed time: 0:00:00
+# End time: 01:04:15 on Jun 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 4/EN2111\ Electronic\ Circuit\ Design/lab4 {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:56:45 on Jun 12,2023
+# Start time: 01:04:15 on Jun 13,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv 
 # -- Compiling module receiver
 # 
 # Top level modules:
 # 	receiver
-# End time: 23:56:45 on Jun 12,2023, Elapsed time: 0:00:00
+# End time: 01:04:15 on Jun 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 4/EN2111\ Electronic\ Circuit\ Design/lab4 {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:56:45 on Jun 12,2023
+# Start time: 01:04:15 on Jun 13,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv 
 # -- Compiling module uart
 # 
 # Top level modules:
 # 	uart
-# End time: 23:56:45 on Jun 12,2023, Elapsed time: 0:00:00
+# End time: 01:04:16 on Jun 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 4/EN2111\ Electronic\ Circuit\ Design/lab4 {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:56:46 on Jun 12,2023
+# Start time: 01:04:16 on Jun 13,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 23:56:46 on Jun 12,2023, Elapsed time: 0:00:00
+# End time: 01:04:16 on Jun 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/anuki/OneDrive\ -\ University\ of\ Moratuwa/Documents/Anuki/Campus/Semester\ 4/EN2111\ Electronic\ Circuit\ Design/lab4 {C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:04:16 on Jun 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4" C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv 
+# -- Compiling module binary_to_7seg
+# 
+# Top level modules:
+# 	binary_to_7seg
+# End time: 01:04:16 on Jun 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 23:56:51 on Jun 12,2023
+# Start time: 01:04:22 on Jun 13,2023
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.uart
 # Loading work.transmitter
 # Loading work.receiver
-# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (8) for port 'data_out'. The port definition is at: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv(14).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/test_uart File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 19
+# Loading work.binary_to_7seg
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (8) for port 'display_out'. The port definition is at: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/test_uart File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 20
 add wave -position insertpoint  \
 sim:/testbench/data_in \
 sim:/testbench/clk \
@@ -69,8 +80,9 @@ sim:/testbench/enable \
 sim:/testbench/tx_busy \
 sim:/testbench/ready \
 sim:/testbench/data_out \
+sim:/testbench/display_out \
 sim:/testbench/loopback \
 sim:/testbench/ready_clr
 run
-# End time: 23:58:07 on Jun 12,2023, Elapsed time: 0:01:16
+# End time: 01:12:10 on Jun 13,2023, Elapsed time: 0:07:48
 # Errors: 0, Warnings: 1

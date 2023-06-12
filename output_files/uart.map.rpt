@@ -1,5 +1,5 @@
-Analysis & Elaboration report for uart
-Mon Jun 12 23:56:33 2023
+Analysis & Synthesis report for uart
+Tue Jun 13 01:22:37 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,16 +7,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: uart:test_uart
-  5. Parameter Settings for User Entity Instance: uart:test_uart|transmitter:uart_tx
-  6. Parameter Settings for User Entity Instance: uart:test_uart|receiver:uart_rx
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "uart:test_uart|receiver:uart_rx"
-  9. Port Connectivity Checks: "uart:test_uart|transmitter:uart_tx"
- 10. Port Connectivity Checks: "uart:test_uart"
- 11. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |uart
+ 13. Parameter Settings for User Entity Instance: transmitter:uart_tx
+ 14. Parameter Settings for User Entity Instance: receiver:uart_rx
+ 15. Port Connectivity Checks: "receiver:uart_rx"
+ 16. Port Connectivity Checks: "transmitter:uart_tx"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -41,78 +49,32 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Jun 12 23:56:33 2023       ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 13 01:22:37 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; uart                                        ;
-; Top-level Entity Name              ; testbench                                   ;
+; Top-level Entity Name              ; uart                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 67                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 29                                          ;
+; Total registers                    ; 29                                          ;
+; Total pins                         ; 23                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart:test_uart ;
-+------------------+-------+----------------------------------+
-; Parameter Name   ; Value ; Type                             ;
-+------------------+-------+----------------------------------+
-; CLOCKS_PER_PULSE ; 4     ; Signed Integer                   ;
-+------------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart:test_uart|transmitter:uart_tx ;
-+------------------+-------+------------------------------------------------------+
-; Parameter Name   ; Value ; Type                                                 ;
-+------------------+-------+------------------------------------------------------+
-; CLOCKS_PER_PULSE ; 4     ; Signed Integer                                       ;
-+------------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart:test_uart|receiver:uart_rx ;
-+------------------+-------+---------------------------------------------------+
-; Parameter Name   ; Value ; Type                                              ;
-+------------------+-------+---------------------------------------------------+
-; CLOCKS_PER_PULSE ; 4     ; Signed Integer                                    ;
-+------------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; testbench          ; uart               ;
+; Top-level entity name                                            ; uart               ; uart               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -192,8 +154,164 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; transmitter.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv    ;         ;
+; receiver.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv       ;         ;
+; uart.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv           ;         ;
+; binary_to_7seg.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 67        ;
+;                                             ;           ;
+; Total combinational functions               ; 62        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 38        ;
+;     -- 3 input functions                    ; 15        ;
+;     -- <=2 input functions                  ; 9         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 62        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 29        ;
+;     -- Dedicated logic registers            ; 29        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 23        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 29        ;
+; Total fan-out                               ; 351       ;
+; Average fan-out                             ; 2.56      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+----------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name    ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+----------------+--------------+
+; |uart                         ; 62 (0)              ; 29 (0)                    ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |uart                          ; uart           ; work         ;
+;    |binary_to_7seg:converter| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|binary_to_7seg:converter ; binary_to_7seg ; work         ;
+;    |receiver:uart_rx|         ; 28 (28)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|receiver:uart_rx         ; receiver       ; work         ;
+;    |transmitter:uart_tx|      ; 27 (27)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|transmitter:uart_tx      ; transmitter    ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++----------------------------------------+-------------------------------------------+
+; Register name                          ; Reason for Removal                        ;
++----------------------------------------+-------------------------------------------+
+; transmitter:uart_tx|data[4..7]         ; Stuck at GND due to stuck port data_in    ;
+; transmitter:uart_tx|state[2..9,11..31] ; Merged with transmitter:uart_tx|state[10] ;
+; receiver:uart_rx|state[2..9,11..31]    ; Merged with receiver:uart_rx|state[10]    ;
+; transmitter:uart_tx|state[10]          ; Stuck at GND due to stuck port data_in    ;
+; receiver:uart_rx|state[10]             ; Stuck at GND due to stuck port data_in    ;
+; Total Number of Removed Registers = 64 ;                                           ;
++----------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 13    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; transmitter:uart_tx|tx                 ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |uart|transmitter:uart_tx|c_clocks[3] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |uart|transmitter:uart_tx|c_bits[2]   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |uart|transmitter:uart_tx|state[0]    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |uart|receiver:uart_rx|c_clocks[3]    ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |uart|receiver:uart_rx|state[10]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |uart ;
++------------------+-------+-------------------------------------------+
+; Parameter Name   ; Value ; Type                                      ;
++------------------+-------+-------------------------------------------+
+; CLOCKS_PER_PULSE ; 16    ; Signed Integer                            ;
++------------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: transmitter:uart_tx ;
++------------------+-------+---------------------------------------+
+; Parameter Name   ; Value ; Type                                  ;
++------------------+-------+---------------------------------------+
+; CLOCKS_PER_PULSE ; 16    ; Signed Integer                        ;
++------------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: receiver:uart_rx ;
++------------------+-------+------------------------------------+
+; Parameter Name   ; Value ; Type                               ;
++------------------+-------+------------------------------------+
+; CLOCKS_PER_PULSE ; 16    ; Signed Integer                     ;
++------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart:test_uart|receiver:uart_rx"                                                              ;
+; Port Connectivity Checks: "receiver:uart_rx"                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -201,33 +319,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "uart:test_uart|transmitter:uart_tx" ;
-+---------------+-------+----------+-----------------------------+
-; Port          ; Type  ; Severity ; Details                     ;
-+---------------+-------+----------+-----------------------------+
-; data_in[7..4] ; Input ; Info     ; Stuck at GND                ;
-+---------------+-------+----------+-----------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "transmitter:uart_tx" ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; data_in[7..4] ; Input ; Info     ; Stuck at GND ;
++---------------+-------+----------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart:test_uart"                                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; tx_busy   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ready_clr ; Input  ; Info     ; Stuck at VCC                                                                        ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 23                          ;
+; cycloneiii_ff         ; 29                          ;
+;     CLR               ; 16                          ;
+;     ENA               ; 1                           ;
+;     ENA CLR           ; 12                          ;
+; cycloneiii_lcell_comb ; 69                          ;
+;     normal            ; 69                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 38                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.68                        ;
++-----------------------+-----------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 12 23:56:26 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart --analysis_and_elaboration
+    Info: Processing started: Tue Jun 13 01:22:30 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file transmitter.sv
@@ -242,27 +381,35 @@ Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
     Info (12023): Found entity 1: uart File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 3
-Info (12127): Elaborating entity "testbench" for the top level hierarchy
-Warning (10755): Verilog HDL warning at testbench.sv(33): assignments to clk create a combinational loop File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 33
-Warning (10175): Verilog HDL warning at testbench.sv(37): ignoring unsupported system task File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 37
-Warning (10175): Verilog HDL warning at testbench.sv(38): ignoring unsupported system task File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 38
-Warning (10175): Verilog HDL warning at testbench.sv(51): ignoring unsupported system task File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 51
-Warning (10175): Verilog HDL warning at testbench.sv(55): ignoring unsupported system task File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 55
-Info (12128): Elaborating entity "uart" for hierarchy "uart:test_uart" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv Line: 29
-Info (12128): Elaborating entity "transmitter" for hierarchy "uart:test_uart|transmitter:uart_tx" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 26
-Warning (10230): Verilog HDL assignment warning at transmitter.sv(41): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file binary_to_7seg.sv
+    Info (12023): Found entity 1: binary_to_7seg File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv Line: 2
+Info (12127): Elaborating entity "uart" for the top level hierarchy
+Info (12128): Elaborating entity "transmitter" for hierarchy "transmitter:uart_tx" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at transmitter.sv(41): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at transmitter.sv(50): truncated value with size 32 to match size of target (3) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 50
-Warning (10230): Verilog HDL assignment warning at transmitter.sv(55): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at transmitter.sv(64): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 64
-Info (12128): Elaborating entity "receiver" for hierarchy "uart:test_uart|receiver:uart_rx" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at receiver.sv(46): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at transmitter.sv(55): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at transmitter.sv(64): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 64
+Info (12128): Elaborating entity "receiver" for hierarchy "receiver:uart_rx" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at receiver.sv(46): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 46
 Warning (10230): Verilog HDL assignment warning at receiver.sv(55): truncated value with size 32 to match size of target (3) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at receiver.sv(56): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at receiver.sv(64): truncated value with size 32 to match size of target (2) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 64
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Mon Jun 12 23:56:33 2023
+Warning (10230): Verilog HDL assignment warning at receiver.sv(56): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at receiver.sv(64): truncated value with size 32 to match size of target (4) File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv Line: 64
+Info (12128): Elaborating entity "binary_to_7seg" for hierarchy "binary_to_7seg:converter" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 41
+Info (13000): Registers with preset signals will power-up high File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv Line: 9
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ready_clr" File: C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv Line: 11
+Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4757 megabytes
+    Info: Processing ended: Tue Jun 13 01:22:37 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 

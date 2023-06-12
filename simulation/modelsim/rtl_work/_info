@@ -9,14 +9,40 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/simulation/modelsim
-vreceiver
+vbinary_to_7seg
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1686594405
+Z2 !s110 1686598456
+!i10b 1
+!s100 ;liJCBd;_U:_ERkY0a[0F0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAPDTFNabcWE5N:XD]bG@_2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1686598038
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv
+!i122 4
+L0 2 24
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1686598456.000000
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/binary_to_7seg.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4}
+Z9 tCvgOpt 0
+vreceiver
+R1
+Z10 !s110 1686598455
 !i10b 1
 !s100 Rf;H6No4A_^>GNhK1zJ7Q1
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+R3
 ITEf?Mi6I<HIAoYenGM:1V1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+R4
 S1
 R0
 w1686593750
@@ -24,37 +50,37 @@ w1686593750
 FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv
 !i122 1
 L0 1 71
-Z5 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z6 !s108 1686594405.000000
-!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv|
-!i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4}
-Z9 tCvgOpt 0
-vtestbench
-R1
-!s110 1686594406
-!i10b 1
-!s100 @S::h^G>U]J;VG5cCj^_[3
-R3
-I7d:?d^SbR2?R1SaTEZ4D92
-R4
-S1
-R0
-w1686594383
-8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv
-FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv
-!i122 3
-L0 3 63
 R5
 r1
 !s85 0
 31
-!s108 1686594406.000000
+Z11 !s108 1686598455.000000
+!s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/receiver.sv|
+!i113 1
+R7
+R8
+R9
+vtestbench
+R1
+R2
+!i10b 1
+!s100 QX@iKPcCQKUYODZf_]h>32
+R3
+I?=86g<o7[4D<d9U;@;N9n3
+R4
+S1
+R0
+w1686598321
+8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv
+FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv
+!i122 3
+L0 3 65
+R5
+r1
+!s85 0
+31
+R6
 !s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/testbench.sv|
 !i113 1
@@ -63,7 +89,7 @@ R8
 R9
 vtransmitter
 R1
-R2
+R10
 !i10b 1
 !s100 Kln`8@n5<SPXjhX7BOA:_1
 R3
@@ -80,7 +106,7 @@ R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/transmitter.sv|
 !i113 1
@@ -91,22 +117,22 @@ vuart
 R1
 R2
 !i10b 1
-!s100 JS=hAPMXGaUS<Uhe:_ZdU0
+!s100 OYZ2>KdGlEfHZlZSh5n?O2
 R3
-Idi1YT3<Bi6zg5k66`OB9_1
+IYUQhiQinDPnjLA<Y8oJW>0
 R4
 S1
 R0
-w1686588672
+w1686598334
 8C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv
 FC:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv
 !i122 2
-L0 1 40
+L0 1 47
 R5
 r1
 !s85 0
 31
-R6
+R11
 !s107 C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4|C:/Users/anuki/OneDrive - University of Moratuwa/Documents/Anuki/Campus/Semester 4/EN2111 Electronic Circuit Design/lab4/uart.sv|
 !i113 1

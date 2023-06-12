@@ -1,0 +1,124 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 08:34:07  June 01, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		uart_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY uart
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:34:07  JUNE 01, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE transmitter_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE receiver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE trans_rec_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE uart.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_M21 -to data_en
+set_location_assignment PIN_AD27 -to data_in[3]
+set_location_assignment PIN_AC27 -to data_in[2]
+set_location_assignment PIN_AC28 -to data_in[1]
+set_location_assignment PIN_AB28 -to data_in[0]
+set_location_assignment PIN_E22 -to ready
+set_location_assignment PIN_M23 -to rstn
+set_location_assignment PIN_E21 -to tx_busy
+set_location_assignment PIN_AC15 -to rx
+set_location_assignment PIN_AB22 -to tx
+set_location_assignment PIN_N21 -to ready_clr
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_en
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_in[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_in[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_in[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_in[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_out[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_out[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_out[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to data_out[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data_out
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ready
+set_instance_assignment -name IO_STANDARD "2.5 V" -to ready_clr
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rstn
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rx
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to tx
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tx_busy
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name SYSTEMVERILOG_FILE binary_to_7seg.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_F21 -to led_out[3]
+set_location_assignment PIN_E19 -to led_out[2]
+set_location_assignment PIN_F19 -to led_out[1]
+set_location_assignment PIN_G19 -to led_out[0]
+set_location_assignment PIN_G18 -to display_out[0]
+set_location_assignment PIN_F22 -to display_out[1]
+set_location_assignment PIN_E17 -to display_out[2]
+set_location_assignment PIN_L26 -to display_out[3]
+set_location_assignment PIN_L25 -to display_out[4]
+set_location_assignment PIN_J22 -to display_out[5]
+set_location_assignment PIN_H22 -to display_out[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to display_out
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led_out[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led_out[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led_out[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led_out[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to led_out
