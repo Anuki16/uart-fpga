@@ -12,25 +12,28 @@ module receiver #(
 
 	enum {RX_IDLE, RX_START, RX_DATA, RX_END} state;
 
-	logic[2:0] c_bits = 3'b0;
-	logic[$clog2(CLOCKS_PER_PULSE)-1:0] c_clocks = 0;
+	logic[2:0] c_bits;
+	logic[$clog2(CLOCKS_PER_PULSE)-1:0] c_clocks;
 	
-  	logic[7:0] temp_data = 8'b0;
+  	logic[7:0] temp_data;
+	logic rx_sync;
 	
-	always_ff @(posedge clk or negedge rstn or negedge ready_clr) begin
+	always_ff @(posedge clk or negedge rstn) begin
 	
-		if (!ready_clr) ready <= 1'b0;
 		if (!rstn) begin
 			c_clocks <= 0;
 			c_bits <= 0;
-			//data_out <= 0;
+			temp_data <= 8'b0;
+			//data_out <= 8'b0;
 			ready <= 0;
 			state <= RX_IDLE;
 			
 		end else begin 
+			rx_sync <= rx;  // Synchronize the input signal using a flip-flop
+			
 			case (state)
 			RX_IDLE : begin
-				if (rx == 0) begin
+				if (rx_sync == 0) begin
 					state <= RX_START;
 					c_clocks <= 0;
 				end
@@ -45,7 +48,7 @@ module receiver #(
 			RX_DATA : begin
 				if (c_clocks == CLOCKS_PER_PULSE-1) begin
 					c_clocks <= 0;
-					temp_data[c_bits] <= rx;
+					temp_data[c_bits] <= rx_sync;
 					if (c_bits == 3'd7) begin
 						state <= RX_END;
 						c_bits <= 0;
